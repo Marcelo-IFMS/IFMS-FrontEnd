@@ -5,8 +5,7 @@ os itens dos menus comas suas respectivas págians html
 Marcelo perez
 */
 //
-function menu(item){
-    $("#conteudo").hide();  
+function menu(item){ 
     $( "#conteudo" ).load( "paginas/"+item+".html").fadeTo(200,0.8);
 }
 

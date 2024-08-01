@@ -1,0 +1,24 @@
+<div id="js">
+    <div id="dv1">
+        <button onclick="window.alert('a')">Window Alert</button>
+        <button onclick="document.getElementById('dv2').innerHTML= 'Boa tarde';">Troca Div 2</button>
+        <button onclick="trocatexto('Olá')">Muda texto</button>
+        <input type="text" id="texto">
+        <button onclick="textoInput()">Insere Texto</button>
+        <input type="text" id="cor">
+        <button onclick="trocaCor()">Troca Cor dv2</button>
+    </div>
+    <div id="dv2"></div> <div id="dv3"></div>
+</div>
+<script type="text/javascript">
+    function trocatexto(texto) {
+        document.getElementById('dv2').innerHTML = texto;
+    }
+    function textoInput(){
+        document.getElementById('dv3').innerHTML = document.getElementById('texto').value;
+    } 
+    function trocaCor(){
+        document.getElementById('dv3').style.color = document.getElementById('cor').value;
+    } 
+    // document.getElementById('dv3').style.fontSize = vari+'px';
+</script>
