@@ -1,31 +1,32 @@
 <div id="js">
     <div id="dv1">
-        <div>
+        <div class="mt-2 container">
             <button onclick="window.alert('a')">Window Alert</button>
             <button onclick="document.getElementById('dv2').innerHTML= 'Boa tarde';">Troca Div 2</button>
         </div>
-        <div><button onclick="textoInput()">Insere Texto</button>
-            
+        <div class="mt-2 container">
+            <button onclick="textoInput()">Insere Texto</button>
             <input type="text" id="texto">
         </div>
-        <div>
+        <div class="mt-2 container">
             <button onclick="trocatexto('Olá')">Muda texto</button>
+            
+        </div>
+        <div class="mt-2 container">
+            <button onclick="trocaCor()">Troca Cor dv2</button> 
             <input type="text" id="cor">
         </div>
-        <div>
-            <button onclick="trocaCor()">Troca Cor dv2</button>
-        </div>
-        <div>
+        <div class="mt-2 container">
             <button onclick="aumentaFonte()">Aumentar Texto dv3</button>
             <button onclick="reduzFonte()">Reduz Texto dv3</button>
         </div>
-        <div>
-            <button onclick="tamanhoFonte('aumenta')">Aumentar  dv3</button>
-            <button onclick="tamanhoFonte('reduz')">Reduz  dv3</button>
+        <div class="mt-2 container">
+            <button onclick="tamanhoFonte('aumenta')">Aumentar dv3</button>
+            <button onclick="tamanhoFonte('reduz')">Reduz dv3</button>
         </div>
     </div>
-    <div id="dv2"></div>
-    <div id="dv3"></div>
+    <div id="dv2" class="mt-2 container"></div>
+    <div id="dv3" class="mt-2 container"></div>
 </div>
 <script type="text/javascript">
     var tamFont = 12;
@@ -51,7 +52,7 @@
             tamFont++;
             document.getElementById('dv3').style.fontSize = tamFont + 'px';
             return false;
-        } 
+        }
         if (condicao == 'reduz') {
             tamFont--;
             document.getElementById('dv3').style.fontSize = tamFont + 'px';
