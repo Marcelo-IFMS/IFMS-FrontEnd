@@ -1,4 +1,7 @@
 <div id="js">
+    <div>
+        <input id="pi_input" type="range" min="1" max="190" step="10" />
+    </div>
     <div id="dv1">
         <div class="mt-2 container">
             <button onclick="window.alert('a')">Window Alert</button>
@@ -10,10 +13,10 @@
         </div>
         <div class="mt-2 container">
             <button onclick="trocatexto('Olá')">Muda texto</button>
-            
+
         </div>
         <div class="mt-2 container">
-            <button onclick="trocaCor()">Troca Cor dv2</button> 
+            <button onclick="trocaCor()">Troca Cor dv2</button>
             <input type="text" id="cor">
         </div>
         <div class="mt-2 container">
@@ -23,6 +26,7 @@
         <div class="mt-2 container">
             <button onclick="tamanhoFonte('aumenta')">Aumentar dv3</button>
             <button onclick="tamanhoFonte('reduz')">Reduz dv3</button>
+            <p>Value: <output id="value"></output></p>
         </div>
     </div>
     <div id="dv2" class="mt-2 container"></div>
@@ -31,10 +35,10 @@
 <script type="text/javascript">
     var tamFont = 12;
     function trocatexto(texto) {
-        document.getElementById('dv2').innerHTML = texto;
+        document.getElementById('dv3').innerHTML = texto;
     }
     function textoInput() {
-        document.getElementById('dv3').innerHTML = document.getElementById('texto').value;
+        document.getElementById('dv2').innerHTML = document.getElementById('texto').value;
     }
     function trocaCor() {
         document.getElementById('dv3').style.color = document.getElementById('cor').value;
@@ -59,5 +63,11 @@
             return false;
         }
     }
+    // const value = document.querySelector("#value");
+    const input = document.querySelector("#pi_input");
+    // value.textContent = input.value;
+    input.addEventListener("input", (event) => {
+        document.getElementById('dv2').style.fontSize = event.target.value+'px';
+    });
 
 </script>
