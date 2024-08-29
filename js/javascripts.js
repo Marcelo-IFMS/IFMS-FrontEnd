@@ -1,4 +1,3 @@
-
 var tamFont = 12;
 function trocatexto(texto) {
     document.getElementById('dv3').innerHTML = texto;
@@ -29,15 +28,9 @@ function tamanhoFonte(condicao) {
         return false;
     }
 }
-const value = document.querySelector("#value");
-const input = document.querySelector("#pi_input");
-input.addEventListener("input", (event) => {
-    value.textContent = input.value;
-    console.log(event.target.value);
-    document.getElementById('dv2').style.fontSize = event.target.value + 'px';
-});
-
-const elementoClick = document.getElementById("dv1");
-elementoClick.addEventListener("click", (event) => {
-    console.log(event.offsetX, event.offsetY);
-});
+function alertaTexto(params) {
+    alert(params);  
+}
+function insereHTMLDV2(params) {
+    document.getElementById('dv2').innerHTML = params;
+}
