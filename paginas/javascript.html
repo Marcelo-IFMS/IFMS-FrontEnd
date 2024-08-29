@@ -5,8 +5,8 @@
     </div>
     <div id="dv1">
         <div class="mt-2 container">
-            <button onclick="window.alert('a')">Window Alert</button>
-            <button onclick="document.getElementById('dv2').innerHTML= 'Boa tarde';">Troca Div 2</button>
+            <button onclick="alertaTexto('Página JS')">Window Alert</button>
+            <button onclick="insereHTMLDV2('boa tarde')">Troca Div 2</button>
         </div>
         <div class="mt-2 container">
             <button onclick="textoInput()">Insere Texto</button>
@@ -39,47 +39,6 @@
     </div>
 </div>
 <script type="text/javascript">
-    var tamFont = 12;
-    function trocatexto(texto) {
-        document.getElementById('dv3').innerHTML = texto;
-    }
-    function textoInput() {
-        document.getElementById('dv2').innerHTML = document.getElementById('texto').value;
-    }
-    function trocaCor() {
-        document.getElementById('dv3').style.color = document.getElementById('cor').value;
-    }
-    function aumentaFonte() {
-        tamFont++;
-        document.getElementById('dv3').style.fontSize = tamFont + 'px';
-    }
-    function reduzFonte() {
-        tamFont--;
-        document.getElementById('dv3').style.fontSize = tamFont + 'px';
-    }
-    function tamanhoFonte(condicao) {
-        if (condicao == 'aumenta') {
-            tamFont++;
-            document.getElementById('dv3').style.fontSize = tamFont + 'px';
-            return false;
-        }
-        if (condicao == 'reduz') {
-            tamFont--;
-            document.getElementById('dv3').style.fontSize = tamFont + 'px';
-            return false;
-        }
-    }
-    const value = document.querySelector("#value");
-    const input = document.querySelector("#pi_input");
-    input.addEventListener("input", (event) => {
-        value.textContent = input.value;
-        console.log(event.target.value);
-        document.getElementById('dv2').style.fontSize = event.target.value + 'px';
-    });
-
-    const elementoClick = document.getElementById("dv1");
-    elementoClick.addEventListener("click", (event) => {
-        console.log(event.offsetX, event.offsetY);
-    });
+  
     
 </script>
