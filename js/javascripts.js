@@ -34,3 +34,7 @@ function alertaTexto(params) {
 function insereHTMLDV2(params) {
     document.getElementById('dv2').innerHTML = params;
 }
+
+$('#conteudo').click(function () {
+    console.log("ola");
+});
